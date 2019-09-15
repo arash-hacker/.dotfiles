@@ -11,9 +11,12 @@ LANG='en_US.UTF-8'
 LC_ALL='en_US.UTF-8'
 #git alias
 alias g="cd ~/Documents/Github"
+alias d="cd ~/Desktop"
+
 alias ga="git add ."
 alias gc="git commit -m"
 alias gp="git push"
+alias gs="git status"
 alias gl="git pull"
 alias gm="git merge"
 alias gg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow)%d%Creset %s %C(bold green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
