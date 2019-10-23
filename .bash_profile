@@ -29,6 +29,7 @@ alias ..='\cd ..'
 alias ...='\cd ../..'
 alias ....='\cd ../../..'
 alias .....='\cd ../../../..'
+alias p="python3"
 
 #colors
        RED="\[\033[0;31m\]"
