@@ -4,7 +4,7 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/dart-sdk/bin:$PATH"
-
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
 #source ~/.bashrc
 
 LANG='en_US.UTF-8'
