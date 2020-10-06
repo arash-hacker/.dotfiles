@@ -12,7 +12,8 @@ LC_ALL='en_US.UTF-8'
 
 
 #git alias
-
+alias d="cd ~/Desktop"
+alias w="cd ~/Downloads"
 alias q="exit"
 alias g="cd ~/Documents/Github"
 alias d="cd ~/Desktop"
