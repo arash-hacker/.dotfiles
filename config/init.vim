@@ -542,6 +542,9 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
+map <C-L> :bnext<CR>
+map <C-H> :bprev<CR>
+
 
 " c
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
