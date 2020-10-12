@@ -544,7 +544,7 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "*****************************************************************************
 map <C-L> :bnext<CR>
 map <C-H> :bprev<CR>
-
+map <C-N> :NERDTreeToggle<CR>
 
 " c
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
