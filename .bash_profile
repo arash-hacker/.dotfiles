@@ -37,6 +37,7 @@ alias ....='\cd ../../..'
 alias .....='\cd ../../../..'
 alias p='python3'
 alias va='p -m venv venv;source venv/bin/activate'
+alias pp='sudo protonvpn c US-FREE#2 -p udp'
 
 #colors
        RED="\[\033[0;31m\]"
