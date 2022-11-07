@@ -1,3 +1,8 @@
+export npm_token=<-->
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH="/opt/homebrew/Cellar/mongodb-community@4.2/4.2.22/bin/:$PATH"
+export PATH="~/google-cloud-sdk/bin:$PATH"
 export ANDROID_HOME='/Users/macuser/Library/Android/sdk'
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
@@ -6,12 +11,18 @@ export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/dart-sdk/bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
 export HOMEBREW_NO_AUTO_UPDATE=1
-
+export PYTHONPATH=/usr/bin/python3
+export PATH=$PATH:/opt/local/bin:/Users/macuser/opt/GNAT/2020/bin
 LANG='en_US.UTF-8'
 LC_ALL='en_US.UTF-8'
 
 
+
 #git alias
+
+alias k="kubectl"
+
+alias gci="git checkout integration"
 alias d="cd ~/Desktop"
 alias w="cd ~/Downloads"
 alias q="exit"
@@ -25,6 +36,10 @@ alias gl="git pull"
 alias gs="git status"
 alias gm="git merge"
 alias gg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow)%d%Creset %s %C(bold green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias dev="npm run dev"
+
+alias s="npm start"
+alias t="npm run test"
 
 #cd alias
 
@@ -38,6 +53,7 @@ alias .....='\cd ../../../..'
 alias p='python3'
 alias va='p -m venv venv;source venv/bin/activate'
 alias pp='sudo protonvpn c US-FREE#2 -p udp'
+
 
 #colors
        RED="\[\033[0;31m\]"
@@ -62,10 +78,4 @@ function tree(){
         find $1 -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 }
 
-export PATH=$PATH:/opt/local/bin:/Users/macuser/opt/GNAT/2020/bin
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-eval "$(rbenv init -)"
-
-source ~/.bashrc
-export PATH="/usr/local/opt/ruby/bin:$PATH"
