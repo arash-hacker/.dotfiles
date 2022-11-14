@@ -1,4 +1,4 @@
-export npm_token=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
+export npm_token=<->
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 export PATH="/opt/homebrew/Cellar/mongodb-community@4.2/4.2.22/bin/:$PATH"
