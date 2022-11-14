@@ -1,4 +1,4 @@
-export npm_token=<-->
+export npm_token=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
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 export PATH="/opt/homebrew/Cellar/mongodb-community@4.2/4.2.22/bin/:$PATH"
@@ -6,22 +6,18 @@ export PATH="~/google-cloud-sdk/bin:$PATH"
 export ANDROID_HOME='/Users/macuser/Library/Android/sdk'
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/dart-sdk/bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PYTHONPATH=/usr/bin/python3
-export PATH=$PATH:/opt/local/bin:/Users/macuser/opt/GNAT/2020/bin
 LANG='en_US.UTF-8'
 LC_ALL='en_US.UTF-8'
 
 
 
 #git alias
-
 alias k="kubectl"
-
 alias gci="git checkout integration"
 alias d="cd ~/Desktop"
 alias w="cd ~/Downloads"
@@ -39,7 +35,12 @@ alias gg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow
 alias dev="npm run dev"
 
 alias s="npm start"
+alias gci="git checkout integration"
 alias t="npm run test"
+git config push.default current
+git config --global branch.autoSetupMerge always
+git config pull.rebase true
+
 
 #cd alias
 
@@ -78,4 +79,7 @@ function tree(){
         find $1 -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 }
 
+export PATH=$PATH:/opt/local/bin:/Users/macuser/opt/GNAT/2020/bin
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+. "$HOME/.cargo/env"
