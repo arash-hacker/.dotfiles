@@ -39,6 +39,7 @@ alias dev="npm run dev"
 alias s="npm start"
 alias gci="git checkout integration"
 alias t="npm run test"
+alias r="git reset --soft HEAD~1"
 git config push.default current
 git config --global branch.autoSetupMerge always
 git config pull.rebase true
