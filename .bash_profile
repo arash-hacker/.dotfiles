@@ -18,6 +18,8 @@ LC_ALL='en_US.UTF-8'
 
 #git alias
 alias k="kubectl"
+alias i="npm i"
+alias npmi="npm i"
 alias gci="git checkout integration"
 alias d="cd ~/Desktop"
 alias w="cd ~/Downloads"
