@@ -11,6 +11,13 @@ export PATH="$HOME/dart-sdk/bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PYTHONPATH=/usr/bin/python3
+export PATH=$PATH:/opt/local/bin:/Users/macuser/opt/GNAT/2020/bin
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export PATH=$JAVA_HOME/bin:$PATH
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/arash/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/arash/google-cloud-sdk/completion.zsh.inc'; fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+. "$HOME/.cargo/env"
 LANG='en_US.UTF-8'
 LC_ALL='en_US.UTF-8'
 
@@ -79,13 +86,11 @@ COLOR_NONE="\[\033[0m\]"
 
 
 alias c="compile_gcc";
+
 function compile_gcc(){ gcc -Wall  $@ -o output 2>&1; ./output;}
 
 function tree(){
         find $1 -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 }
 
-export PATH=$PATH:/opt/local/bin:/Users/macuser/opt/GNAT/2020/bin
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-. "$HOME/.cargo/env"
+~/.tilde-switch >> /dev/null;
