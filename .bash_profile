@@ -37,6 +37,7 @@ alias gg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow
 alias dev="npm run dev"
 alias gbb="git switch -"
 alias cl="git clone " 
+alias ci="npm ci " 
 
 alias s="npm start"
 alias gci="git checkout integration"
