@@ -46,6 +46,8 @@ alias gbb="git switch -"
 alias cl="git clone " 
 alias ci="npm ci " 
 alias b="npm run build"
+alias gs="git stash "
+alias gsp="git stash pop"
 
 alias s="npm start"
 alias gci="git checkout integration"
