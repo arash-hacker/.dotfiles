@@ -1,21 +1,22 @@
 export MONGOMS_ARCH=x64
 export MONGO_URL=mongodb://localhost:27017
-export PATH=~/Library/Python/3.8/bin:$PATH
 export GPG_TTY=$(tty)
 export npm_token=<->
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
+export HOMEBREW_NO_AUTO_UPDATE=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH="~/google-cloud-sdk/bin:$PATH"
 export ANDROID_HOME='/Users/macuser/Library/Android/sdk'
+# path 
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/dart-sdk/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
-export HOMEBREW_NO_AUTO_UPDATE=1
 export PYTHONPATH=/usr/bin/python3
 export PATH=$PATH:/Applications/sonar-scanner/bin
 export PATH=$PATH:/Applications/sonarcube/bin
+export PATH=~/Library/Python/3.8/bin:$PATH
+export PATH="~/google-cloud-sdk/bin:$PATH"
 
 LANG='en_US.UTF-8'
 LC_ALL='en_US.UTF-8'
