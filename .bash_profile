@@ -1,7 +1,10 @@
+export MONGOMS_ARCH=x64
+export MONGO_URL=mongodb://localhost:27017
+export PATH=~/Library/Python/3.8/bin:$PATH
+export GPG_TTY=$(tty)
 export npm_token=<->
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH="/opt/homebrew/Cellar/mongodb-community@4.2/4.2.22/bin/:$PATH"
 export PATH="~/google-cloud-sdk/bin:$PATH"
 export ANDROID_HOME='/Users/macuser/Library/Android/sdk'
 export PATH=$ANDROID_HOME/tools:$PATH
@@ -11,19 +14,16 @@ export PATH="$HOME/dart-sdk/bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PYTHONPATH=/usr/bin/python3
-export PATH=$PATH:/opt/local/bin:/Users/macuser/opt/GNAT/2020/bin
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export PATH=$JAVA_HOME/bin:$PATH
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/arash/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/arash/google-cloud-sdk/completion.zsh.inc'; fi
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-. "$HOME/.cargo/env"
+export PATH=$PATH:/Applications/sonar-scanner/bin
+export PATH=$PATH:/Applications/sonarcube/bin
+
 LANG='en_US.UTF-8'
 LC_ALL='en_US.UTF-8'
 
-
-
 #git alias
+
+alias b="npm run build"
+alias b2="npm run build2"
 alias k="kubectl"
 alias i="npm i"
 alias npmi="npm i"
@@ -38,21 +38,31 @@ alias ga="git add ."
 alias gc="git commit -m"
 alias gp="git push origin"
 alias gl="git pull origin"
+alias gpf="git push origin --force"
 alias gs="git status"
 alias gm="git merge"
 alias gg="git log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow)%d%Creset %s %C(bold green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias dev="npm run dev"
 alias gbb="git switch -"
 alias cl="git clone " 
-alias ci="npm ci " 
-alias b="npm run build"
-alias gs="git stash "
-alias gsp="git stash pop"
-
+alias ci="npm ci "
 alias s="npm start"
 alias gci="git checkout integration"
+alias gcm="git checkout master"
 alias t="npm run test"
 alias r="git reset --soft HEAD~1"
+alias gch="git checkout "
+alias gcb="git checkout -b "
+alias pip='pip3'
+alias ii='npm i --legacy-peer-deps'
+alias rst='brew services restart mongodb-community@5.0'
+alias mongod='mongod --dbpath=/Users/arash/data/db'
+
+alias mond="mongod --dbpath=/Users/arash/data/db"
+alias mmake="CGO_ENABLED=0 GOOS='linux' GO111MODULE='on' PIPENV_VENV_IN_PROJECT='true' make   "
+alias brew="arch -arm64 brew"
+alias helm2="/usr/local/bin/helm"
+
 git config push.default current
 git config --global branch.autoSetupMerge always
 git config pull.rebase true
@@ -68,8 +78,6 @@ alias ...='\cd ../..'
 alias ....='\cd ../../..'
 alias .....='\cd ../../../..'
 alias p='python3'
-alias va='p -m venv venv;source venv/bin/activate'
-alias pp='sudo protonvpn c US-FREE#2 -p udp'
 
 
 #colors
@@ -89,11 +97,14 @@ COLOR_NONE="\[\033[0m\]"
 
 
 alias c="compile_gcc";
-
 function compile_gcc(){ gcc -Wall  $@ -o output 2>&1; ./output;}
 
 function tree(){
         find $1 -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 }
 
-~/.tilde-switch >> /dev/null;
+export PATH=$PATH:/opt/local/bin:/Users/macuser/opt/GNAT/2020/bin
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+# Load RVM into a shell session *as a function*
+. "$HOME/.cargo/env"
